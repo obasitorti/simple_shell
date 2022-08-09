@@ -1,2 +1,1 @@
-Coding a simple shell.
-Kiki Temitayo & Torti Obasi
+Simple shell project by Kiki Temitayo and Torti Obasi
