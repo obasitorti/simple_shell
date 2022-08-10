@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 /**
  * _strcpy - copie a string from source to destination
  * @source: the string source

@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 /**
  * _itoa - convert integer to array
@@ -101,7 +101,7 @@ int write_history(sh_t *data __attribute__((unused)))
 	char *filename = "history";
 	char *line_of_history = "this is a line of history";
 	ssize_t fd, w;
-	int len =0;
+	int len = 0;
 
 	if (!filename)
 		return (-1);

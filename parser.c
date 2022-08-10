@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 /**
  * is_path_form - chekc if the given fikenname is a path
  * @data: the data strucct pointer
@@ -63,8 +63,7 @@ int is_builtin(sh_t *data)
 		{"exit", abort_prg},
 		{"cd", change_dir},
 		{"help", display_help},
-		{NULL, NULL}
-	};
+		{NULL, NULL}};
 	int i = 0;
 
 	while ((blt + i)->cmd)

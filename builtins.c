@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 #define SETOWD(V) (V = _strdup(_getenv("OLDPWD")))
 /**
@@ -116,8 +116,7 @@ int handle_builtin(sh_t *data)
 		{"exit", abort_prg},
 		{"cd", change_dir},
 		{"help", display_help},
-		{NULL, NULL}
-	};
+		{NULL, NULL}};
 	int i = 0;
 
 	while ((blt + i)->cmd)

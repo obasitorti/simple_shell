@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 /**
  * main - the main function
@@ -82,7 +82,7 @@ int read_line(sh_t *data)
 			new_size = size * 2;
 			length = csr_ptr - data->line;
 			data->line = _realloc(data->line, size * sizeof(char),
-						new_size * sizeof(char));
+								  new_size * sizeof(char));
 			if (data->line == NULL)
 				return (FAIL);
 			size = new_size;
@@ -114,12 +114,12 @@ int split_line(sh_t *data)
 		return (FAIL);
 	while (token)
 	{
-		data->args[i++] =  token;
+		data->args[i++] = token;
 		if (i + 2 >= size)
 		{
 			new_size = size * 2;
 			data->args = _realloc(data->args, size * sizeof(char *),
-					new_size * sizeof(char *));
+								  new_size * sizeof(char *));
 			if (data->args == NULL)
 				return (FAIL);
 			size = new_size;
@@ -169,8 +169,8 @@ int process_cmd(sh_t *data)
 	{
 		signal(SIGINT, SIG_DFL);
 		if (execve(data->cmd, data->args, environ) < 0)
-		data->error_msg = _strdup("not found\n");
-			return (FAIL);
+			data->error_msg = _strdup("not found\n");
+		return (FAIL);
 	}
 	else
 	{
